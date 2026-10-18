@@ -61,11 +61,6 @@ namespace KIPLATFORM
             return result;
         }
 
-        bool GetSecretNoPrompt( const wxString& aService, const wxString& aKey, wxString& aSecret )
-        {
-            return GetSecret( aService, aKey, aSecret );
-        }
-
         bool DeleteSecret( const wxString& aService, const wxString& aKey )
         {
             wxString display = aService + wxS( ":" ) + aKey;

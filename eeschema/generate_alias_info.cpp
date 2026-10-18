@@ -274,7 +274,7 @@ private:
     wxString                        m_html;
     SYMBOL_LIBRARY_ADAPTER* m_libs;
     LIB_ID const                    m_lib_id;
-    const LIB_SYMBOL*               m_symbol;
+    LIB_SYMBOL*                     m_symbol;
     int                             m_unit;
 };
 
