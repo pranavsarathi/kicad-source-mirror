@@ -517,9 +517,9 @@ const SELECTION& PCB_PROPERTIES_PANEL::getSelection( SELECTION& aFallbackSelecti
 EDA_ITEM* PCB_PROPERTIES_PANEL::getFrontItem()
 {
     SELECTION fallbackSelection;
-    const SELECTION& selection = getSelection( fallbackSelection );
+    SELECTION filtered = filterOutReadOnlyGenChildren( getSelection( fallbackSelection ) );
 
-    return selection.Empty() ? nullptr : selection.Front();
+    return filtered.Empty() ? nullptr : filtered.Front();
 }
 
 
